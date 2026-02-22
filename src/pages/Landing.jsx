@@ -1,17 +1,37 @@
+import Navbar from "../components/Navbar";
+import "./Landing.css";
+import doctorImg from "../assets/doctor.jpg"; // حطي صورة هنا
 
 function Landing() {
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
-     <h1>Landing Page</h1>;
-      <h2>CairoCare Vault</h2>
-      <p>Secure Healthcare Data Management System</p>
+    <>
+      <Navbar />
 
-      <div style={{ marginTop: "20px" }}>
-        <a href="/login">
-          <button>Login</button>
-        </a>
-      </div>
-    </div>
+      <section className="hero">
+        <div className="hero-text">
+          <p className="small-text">CARING FOR LIFE</p>
+          <h1>
+            Leading the Way <br />
+            in Medical Excellence
+          </h1>
+          <button className="services-btn">Our Services</button>
+        </div>
+
+        <div className="hero-image">
+          <img src={doctorImg} alt="doctor" />
+        </div>
+      </section>
+
+      <section className="cards">
+        <div className="card">Book Appointment</div>
+        <div className="card">Consult Doctors</div>
+        <div className="card">24/7 Emergency 
+          
+       
+          
+        </div>
+      </section>
+    </>
   );
 }
 

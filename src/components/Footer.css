@@ -1,0 +1,23 @@
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer .socials span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer .socials span:hover {
+  color: #00f2fe;
+}
