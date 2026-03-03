@@ -1,8 +1,11 @@
 * {
+  box-sizing: border-box;
+}
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -14,4 +17,7 @@ body {
   border-radius: 10px;
   min-width: 200px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+#root {
+  height: 100vh;
 }

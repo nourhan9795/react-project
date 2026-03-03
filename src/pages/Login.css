@@ -1,0 +1,139 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.login-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)),
+    url("/src/assets/login-image.jpg") center/cover no-repeat;
+}
+.login-container {
+  background-attachment: fixed;
+}
+.login-card {
+  border: 1px solid rgba(255,255,255,0.3);
+}
+/* .login-image {
+  flex: 1;
+background: url("/src/assets/login-image.jpg") center/cover no-repeat;
+} */
+
+.login-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 380px;
+  /* backdrop-filter: blur(10px); */
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+
+/* .login-card {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+} */
+
+.login-card h1 {
+  color: #0f172a;
+}
+
+.login-card p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.login-card input,
+.login-card select {
+    transition: 0.3s;
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.login-card input:focus,
+.login-card select:focus {
+  outline: none;
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
+}
+/* .login-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #38bdf8;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+} */
+
+.login-card button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background: #0284c7;
+}
+
+.login-card button:hover {
+  background: #0ea5e9;
+}
+
+.login-card {
+  animation: smoothAppear 0.7s ease;
+}
+
+.remember {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.remember label {
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.remember input {
+  width: auto;
+}
+
+@keyframes smoothAppear  {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

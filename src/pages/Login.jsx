@@ -1,36 +1,75 @@
-import { useNavigate } from "react-router-dom";
+import "./Login.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [role, setRole] = useState("");
-   const navigate = useNavigate();
-  return (
-    <div style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-      <div style={{ padding: "30px", background: "white", borderRadius: "10px", width: "300px" }}>
-        <h2>Login</h2>
+  const [name, setName] = useState("");
+  const [remember, setRemember] = useState(false);
+  
+  const handleLogin = () => {
+    if (!role || !name) {
+      alert("Please fill all fields");
+      return;
+    }
 
-        <input placeholder="Email" style={{ width: "100%", marginTop: "10px" }} />
-        <input placeholder="Password" type="password" style={{ width: "100%", marginTop: "10px" }} />
-
-        <select
-          style={{ width: "100%", marginTop: "10px" }}
-          onChange={(e) => setRole(e.target.value)}
-        >
-          <option value="">Select Role</option>
-          <option value="patient">Patient</option>
-          <option value="doctor">Doctor</option>
-          <option value="admin">Admin</option>
-        </select>
-<button
-  style={{ width: "100%", marginTop: "15px" }}
-  onClick={() => {
+  if (remember) {
     localStorage.setItem("role", role);
-    navigate("/dashboard");
-  }}>
+    localStorage.setItem("name", name);
+  }
 
-  Login
-</button>
+    navigate("/dashboard");
+  };
+
+  return (
+    <div className="login-container">
+      
+      {/* Left Image */}
+      <div className="login-image"></div>
+
+      {/* Right Form */}
+      <div className="login-form">
+        <div className="login-card">
+          <h1>CairoCare</h1>
+          <p>Secure Medical Records System</p>
+
+          <input
+            type="text"
+            placeholder="Enter your name"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+          />
+          <div className="remember">
+             <label>
+              <input
+                type="checkbox"
+                  onChange={(e) => setRemember(e.target.checked)}
+              />
+                   Remember me
+              </label>
+           </div>
+
+          <select onChange={(e) => setRole(e.target.value)}>
+            <option value="">Select role</option>
+            <option value="patient">Patient</option>
+            <option value="doctor">Doctor</option>
+            <option value="admin">Admin</option>
+          </select>
+
+          <button onClick={handleLogin}>Login</button>
+        </div>
       </div>
+
     </div>
   );
 }
