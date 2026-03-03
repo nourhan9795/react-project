@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import "./Landing.css";
 import doctorImg from "../assets/doctor.jpg"; // حطي صورة هنا
-
+import { Link } from "react-router-dom";
 function Landing() {
   return (
     <>
@@ -20,7 +20,9 @@ function Landing() {
       team is here 24/7 to ensure your safety, comfort, and well-being.
     </p>
 
-    <button className="services-btn">Explore Our Services</button>
+    <Link to="/login">
+  <button className="services-btn">Explore Our Services</button>
+</Link>
   </div>
 </section>
 
