@@ -7,14 +7,15 @@
   color: white;
   position: fixed;
   width: 100%;
+  box-sizing: border-box;
   top: 0;
   z-index: 100;
 }
 
 .navbar ul {
-  list-style: none;
+  list-style-type: square;;
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 
 .navbar li {

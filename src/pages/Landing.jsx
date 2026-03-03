@@ -6,21 +6,27 @@ function Landing() {
   return (
     <>
       <Navbar />
-
       <section className="hero">
-        <div className="hero-text">
-          <p className="small-text">CARING FOR LIFE</p>
-          <h1>
-            Leading the Way <br />
-            in Medical Excellence
-          </h1>
-          <button className="services-btn">Our Services</button>
-        </div>
+  <div className="hero-text">
+    <p className="small-text">COMPASSION • TRUST • CARE</p>
 
-        <div className="hero-image">
-          <img src={doctorImg} alt="doctor" />
-        </div>
-      </section>
+    <h1>
+    We Are Providing Best Health Services
+    </h1>
+
+    <p className="hero-description">
+      Because every patient deserves personalized attention and trusted care.
+      From preventive checkups to emergency services, our dedicated medical
+      team is here 24/7 to ensure your safety, comfort, and well-being.
+    </p>
+
+    <button className="services-btn">Explore Our Services</button>
+  </div>
+</section>
+
+      
+
+      
 
       <section className="cards">
         <div className="card">Book Appointment</div>
