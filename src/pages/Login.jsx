@@ -19,8 +19,9 @@ function Login() {
     localStorage.setItem("role", role);
     localStorage.setItem("name", name);
   }
-
-    navigate("/dashboard");
+    if (role === "patient") {
+    navigate("/patient");
+  }
   };
 
   return (

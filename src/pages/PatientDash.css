@@ -1,0 +1,49 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background: #f1f5f9;
+}
+
+.sidebar {
+  width: 230px;
+  background: #0f172a;
+  color: white;
+  padding: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.main {
+  flex: 1;
+}
+
+.navbar {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-grid {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
