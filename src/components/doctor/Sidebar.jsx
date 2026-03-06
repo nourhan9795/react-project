@@ -10,11 +10,13 @@ function Sidebar() {
 
         <li className="active">Dashboard</li>
 
-        <li>My Records</li>
+        <li>Patients</li>
 
-        <li>Access Requests</li>
+        <li>Add Record</li>
 
-        <li>Activity</li>
+        <li>Request Access</li>
+
+        <li>Activity Logs</li>
 
         <li>Settings</li>
 
